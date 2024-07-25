@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    box-shadow: 3px 0 10px lightgrey;
+
+    h1 {
+        font-size: 30px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        select {
+            border-radius: 5px;
+            padding: 2px 3px;
+            cursor: pointer;
+            border: 1px solid grey;
+
+            &:focus {
+                outline: none;
+                border: 1px solid #2764ff;
+                box-shadow: 0 1px 15px lightgrey;
+            }
+        }
+    }
+}

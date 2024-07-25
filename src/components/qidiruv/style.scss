@@ -1,0 +1,33 @@
+.qidiruv {
+
+    input {
+        border: none;
+        padding: 10px 20px;
+        width: 500px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px lightgrey;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        background-color: #1A9AF8;
+        color: white;
+        padding: 7px 30px;
+        border-radius: 20px 20px 20px 20px;
+        margin-left: -79px;
+        transition: 0.2s;
+
+        i {
+            transform: rotate(80deg);
+        }
+
+        &:hover {
+            background-color: darken(#1A9AF8, 10);
+        }
+    }
+
+
+}
