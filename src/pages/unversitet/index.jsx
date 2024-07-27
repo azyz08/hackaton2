@@ -1,4 +1,4 @@
-import"./style.scss"
+import "./style.scss"
 import Qidiruv from "../../components/qidiruv";
 
 export default function Univarsitet() {
