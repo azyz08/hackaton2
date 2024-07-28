@@ -55,14 +55,14 @@ export default function Navbar() {
         <>
             <div className={`${darkMode ? "dark" : ""} `}>
                 <nav className={`nav dark:bg-[#121212] navbar ${scrolled ? 'scrolled' : ''}`}>
-                    <h1>Logo</h1>
+                    <Link to={"/"}><h1>Logo</h1></Link>
                     <input type="checkbox" id="m" />
                     <ul>
                         <Link
                             to="/"
                             onClick={() => handleClick('/')}
                             className={activeLink === '/' ? 'active' : ''}
-                        ><p>Home</p>
+                        ><p>Bosh sahifa</p>
                             <span className={`underline ${activeLink === '/' ? 'active' : ''}`}></span>
                         </Link>
                         <Link

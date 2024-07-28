@@ -15,20 +15,21 @@ export default function Qidiruv() {
     };
     return (
         <>
-            <div className="colorContainer dark:shadow-none shadow-[2px_2px_15px_lightgrey] hover:border-[blue] border-1 dark:border-none">
+            <div className="colorContainer ">
                 <form onSubmit={handleSubmit} className="messageForm">
-                    <input
-                        type="search"
-                        value={message}
-                        onChange={handleChange}
-                        placeholder="Sohani yozing"
-                        className="messageInput"
-                    />
+                    <label className="w-[100%]" htmlFor="c">
+                        <input
+                            type="search"
+                            value={message}
+                            onChange={handleChange}
+                            placeholder="Sohani yozing"
+                            className="messageInput"
+                        />
+                    </label>
                     {message.trim() && (
                         <button
                             type="submit"
-                            className="sendButton"
-                        >
+                            className="sendButton">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     )}
