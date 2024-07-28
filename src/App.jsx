@@ -11,7 +11,7 @@ export default function App() {
       <div className={`${darkMode ? "dark" : ""} `}>
         <div className="dark:bg-[#121212] dark:text-white duration-300 text-black">
           <Navbar />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     </>

@@ -1,25 +1,138 @@
-.Fotter{
+.Fotter {
     padding: 30px 70px;
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat( 5, 1fr);
+    display: flex;
     align-items: center;
-    .bir{
-        img{
-            width:60px;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    .bir {
+        img {
+            width: 60px;
         }
     }
-    .ikki{
+
+    .ikki {
         display: flex;
         gap: 30px;
-        i{
-            font-size: 25px;
+
+        i {
+            font-size: 20px;
         }
     }
 }
-@media (max-width:800px){
-    .Fotter{
-        display: grid;
-        grid-template-columns: 3, 1fr;
+
+@media (max-width: 1200px) {
+    .Fotter {
+        padding: 30px 20px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .bir {
+            img {
+                width: 60px;
+            }
+        }
+
+        .ikki {
+            display: flex;
+            gap: 30px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .Fotter {
+        padding: 20px 10px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .bir {
+            display: none;
+
+            img {
+                width: 60px;
+            }
+        }
+
+        .ikki {
+            display: flex;
+            gap: 30px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .Fotter {
+        padding: 20px 10px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            p {
+                margin: 0 auto;
+            }
+        }
+
+
+        .bir {
+            display: none;
+
+            img {
+                width: 60px;
+            }
+        }
+
+        .ikki {
+            display: flex;
+            gap: 30px;
+
+            i {
+                font-size: 20px;
+            }
+        }
     }
 }
