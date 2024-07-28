@@ -7,6 +7,8 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import useMode from "../../ustils/zustand"
 import React, { useEffect, useState } from "react"
 import { Button, Drawer, Space } from 'antd';
+import { useTranslation } from "react-i18next"
+import '../../i18n.js';
 
 
 export default function Navbar() {
@@ -51,40 +53,55 @@ export default function Navbar() {
         setOpen(false);
     };
 
+    const { t, i18n } = useTranslation();
+
+    useEffect(() => {
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            i18n.changeLanguage(savedLanguage);
+        }
+    }, [i18n]);
+
+    const handleChange = (e) => {
+        const selectedLanguage = e.target.value;
+        i18n.changeLanguage(selectedLanguage);
+        localStorage.setItem('language', selectedLanguage);
+    };
+
     return (
         <>
             <div className={`${darkMode ? "dark" : ""} `}>
                 <nav className={`nav dark:bg-[#121212] navbar ${scrolled ? 'scrolled' : ''}`}>
-                    <Link to={"/"}><h1>Logo</h1></Link>
+                    <Link to={"/"}><img className="logo" src="/logo.png" alt="" /></Link>
                     <input type="checkbox" id="m" />
                     <ul>
                         <Link
                             to="/"
                             onClick={() => handleClick('/')}
                             className={activeLink === '/' ? 'active' : ''}
-                        ><p>Bosh sahifa</p>
+                        ><p>{t('home')}</p>
                             <span className={`underline ${activeLink === '/' ? 'active' : ''}`}></span>
                         </Link>
                         <Link
                             to="/universitet"
                             onClick={() => handleClick('/universitet')}
                             className={activeLink === '/universitet' ? 'active' : ''}
-                        > <p>Universitetlar</p>
+                        > <p>{t('universities')}</p>
                             <span className={`underline ${activeLink === '/universitet' ? 'active' : ''}`}></span>
                         </Link>
                         <Link
                             to="/oquv-markaz"
                             onClick={() => handleClick('/oquv-markaz')}
                             className={activeLink === '/oquv-markaz' ? 'active' : ''}
-                        > <p>O'quv markazlar</p>
+                        > <p>{t('studyCenters')}</p>
                             <span className={`underline ${activeLink === '/oquv-markaz' ? 'active' : ''}`}></span>
                         </Link>
                     </ul>
                     <div className="end flex items-center gap-4">
-                        <select className="border-[1px] rounded-[5px] pt-[2px] pb-[2px] bg-white cursor-pointer border-[blue] text-[#121212] focus:outline-none">
-                            <option>O'z</option>
-                            <option>Рус</option>
-                            <option>Eng</option>
+                        <select className="border-[1px] rounded-[5px] pt-[2px] pb-[2px] bg-white cursor-pointer border-[blue] text-[#121212] focus:outline-none" value={i18n.language} onChange={handleChange}>
+                            <option value="uz">O'z</option>
+                            <option value="ru">Рус</option>
+                            <option value="en">Eng</option>
                         </select>
                         <DarkModeSwitch
                             className="text-[#FFA500] dark:text-white"
@@ -132,7 +149,6 @@ export default function Navbar() {
                     </Drawer>
                 </nav>
             </div>
-
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/universitet" element={<Univarsitet />} />

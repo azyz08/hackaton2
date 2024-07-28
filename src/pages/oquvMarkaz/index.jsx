@@ -1,12 +1,15 @@
 import "./style.scss"
 import Qidiruv from "../../components/qidiruv";
 import CardData from "../../components/card";
+import { useTranslation } from "react-i18next";
 
 export default function OquvMarkaz() {
+    const { t } = useTranslation();
+
     return (
         <div className="opwiyBox">
             <div className="search">
-                <h1>O'quv Markazlar</h1>
+                <h1>{t('studyCenters')}</h1>
                 <Qidiruv />
             </div>
             <div className="cards duration-200 bg-[#e8e8e8] dark:bg-[#6c6c6c26]">
