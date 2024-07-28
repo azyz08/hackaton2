@@ -1,7 +1,7 @@
 import "./style.scss"
 import React, { useState } from "react";
 
-export default function Qidiruv() {
+export default function Qidiruv({ soha }) {
     const [message, setMessage] = useState('');
     const [submittedMessage, setSubmittedMessage] = useState('');
 
@@ -22,7 +22,7 @@ export default function Qidiruv() {
                             type="search"
                             value={message}
                             onChange={handleChange}
-                            placeholder="Sohani yozing"
+                            placeholder={soha}
                             className="messageInput"
                         />
                     </label>

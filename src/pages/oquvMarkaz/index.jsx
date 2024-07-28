@@ -10,7 +10,7 @@ export default function OquvMarkaz() {
         <div className="opwiyBox">
             <div className="search">
                 <h1>{t('studyCenters')}</h1>
-                <Qidiruv />
+                <Qidiruv soha={t('soha2')} />
             </div>
             <div className="cards duration-200 bg-[#e8e8e8] dark:bg-[#6c6c6c26]">
                 <CardData src={"https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2019/03/space_training_to_prepare_the_future_workforce/19324097-1-eng-GB/Space_training_to_prepare_the_future_workforce_pillars.jpg    "} title={"CoddyCamp o'quv markazi"} yb={"bor"} foiz={"4.2/5"} desc={"WEb development, Mobile Application Development, Figma"} />

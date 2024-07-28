@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import "./style.scss"
 import { Link } from "react-router-dom";
-export default function CardData({ src, title, yb, foiz, desc }) {
+export default function CardData({ src, title, yb, foiz, desc, more }) {
+    const { t } = useTranslation();
     return (
         <>
             <div className="wrapper">
@@ -22,7 +24,7 @@ export default function CardData({ src, title, yb, foiz, desc }) {
                         <p className="desc">
                             {desc}
                         </p>
-                        <Link className="readMore" to={"/"}>Read Mode</Link>
+                        <Link className="readMore" to={"/"}>{t('more')}</Link>
                     </div>
                 </div>
             </div >

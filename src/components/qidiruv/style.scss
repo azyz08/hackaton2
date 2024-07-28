@@ -11,10 +11,6 @@
     box-shadow: 3.5px 3.5px 3px inset #757575a8, 2px 2px 10px #5353535d;
     border: 2px solid transparent;
 
-    ::placeholder {
-        color: rgb(105, 105, 105);
-    }
-
     .messageForm {
         overflow: hidden;
         display: flex;
@@ -155,10 +151,10 @@
                 width: 100%;
                 padding-top: 4px;
                 padding-bottom: 4px;
-                padding-left: 17px;
+                padding-left: 10px;
                 font-size: 16px;
                 border-radius: 12px;
-                margin-right: 10px;
+                margin-right: 0;
                 border: 1px solid transparent;
 
                 &:focus {

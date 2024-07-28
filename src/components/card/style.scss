@@ -45,7 +45,7 @@
 
     .card:hover .poster img {
         transform: scale(1.1);
-        opacity: 60%;
+        opacity: 50%;
     }
 
     .details {
@@ -168,11 +168,6 @@
             transition: .3s;
         }
 
-        .card:hover .poster img {
-            transform: scale(1.1);
-            opacity: 60%;
-        }
-
         .details {
             position: absolute;
             bottom: -100%;
@@ -292,11 +287,6 @@
             height: 100%;
             object-fit: cover;
             transition: .3s;
-        }
-
-        .card:hover .poster img {
-            transform: scale(1.1);
-            opacity: 60%;
         }
 
         .details {

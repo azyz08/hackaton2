@@ -9,7 +9,7 @@ export default function Univarsitet() {
         <div className="opwiyBox">
             <div className="search">
                 <h1>{t('universities')}</h1>
-                <Qidiruv />
+                <Qidiruv soha={t('soha')} />
             </div>
             <div className="cards duration-200 bg-[#e8e8e8] dark:bg-[#6c6c6c26]">
                 <CardData src={"https://avatars.mds.yandex.net/get-altay/5235091/2a00000181f1d1a3650a71908d9893138e24/L_height"} title={"CoddyCamp o'quv markazi"} yb={"bor"} foiz={"4.2/5"} desc={"WEb development, Mobile Application Development, Figma"} />

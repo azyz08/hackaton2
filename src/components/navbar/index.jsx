@@ -116,33 +116,28 @@ export default function Navbar() {
                             </Button>
                         </Space>
                     </div>
-                    <Drawer
-                        title={`${size} Drawer`}
-                        placement="right"
-                        size={size}
-                        onClose={onClose}
-                        open={open}
-                    >
+                    <Drawer className="duration-200 bg-white dark:bg-black"
+                        title={`${size} Drawer`} placement="right" size={size} onClose={onClose} open={open}>
                         <ul>
                             <Link
                                 to="/"
                                 onClick={() => handleClick('/')}
                                 className={activeLink === '/' ? 'active' : ''}
-                            ><p>Home</p>
+                            ><p>{t('home')}</p>
                                 <span className={`underline ${activeLink === '/' ? 'active' : ''}`}></span>
                             </Link>
                             <Link
                                 to="/universitet"
                                 onClick={() => handleClick('/universitet')}
                                 className={activeLink === '/universitet' ? 'active' : ''}
-                            > <p>Universitetlar</p>
+                            > <p>{t('universities')}</p>
                                 <span className={`underline ${activeLink === '/universitet' ? 'active' : ''}`}></span>
                             </Link>
                             <Link
                                 to="/oquv-markaz"
                                 onClick={() => handleClick('/oquv-markaz')}
                                 className={activeLink === '/oquv-markaz' ? 'active' : ''}
-                            > <p>O'quv markazlar</p>
+                            > <p>{t('studyCenters')}</p>
                                 <span className={`underline ${activeLink === '/oquv-markaz' ? 'active' : ''}`}></span>
                             </Link>
                         </ul>
