@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 const ScrollSlider = () => {
     const [scrollPercentage, setScrollPercentage] = useState(0);
     const sliderRef = useRef(null);
@@ -54,7 +53,7 @@ const ScrollSlider = () => {
         transition: 'none', // Transition ni o'chirib tashladik
     };
 
-    return <div ref={sliderRef} style={sliderStyle} />;
+    return <div className='slid' ref={sliderRef} style={sliderStyle} />;
 };
 
 export default ScrollSlider;
